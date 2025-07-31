@@ -72,6 +72,7 @@ res.render("show.ejs", {post});
     let {id} = req.params
     let post = posts.find((p) => id === p.id);
     res.render("edit.ejs", {post});
+    res.redirect("/posts");
 })
 
 app.patch("/posts/:id", (req, res) => { 
