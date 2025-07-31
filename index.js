@@ -51,7 +51,8 @@ res.render("index.ejs", {posts});
 })
 
 app.get("/posts/new", (req, res) => { 
-res.render("new.ejs")
+res.render("new.ejs")  
+res.redirect("/posts");
 })
 
 app.post("/posts", (req, res) => {
